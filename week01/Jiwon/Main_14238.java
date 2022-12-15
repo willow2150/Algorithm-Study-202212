@@ -52,7 +52,7 @@ public class Main_14238 {
         int length = cnt[0] + cnt[1] + cnt[2];
 
         res = new char[length];
-        visited = new boolean[length][length][length][3][3];
+        visited = new boolean[51][51][51][3][3];
 
         if (dfs(0,0,0,'A','A')){
             for (int i = 0; i < res.length; i++) {
