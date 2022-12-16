@@ -41,39 +41,31 @@
 Repository
  ├─ README.md
  │
- ├─ Online Judge1
- │        │
- │        ├─ member1
- │        │     │
- │        │     ├── week1
- │        │     │     ├──problemNumber.java
- │        │     │     ├── ...
- │        │     │
- │        │     ├── week2
- │        │     │     ├──problemNumber.java
- │        │     │     ├── ...
- │        │     │
- │        │     ├── ...
- │        │    
- │        ├─ member2
- │        │     │
- │        │     ├── week1
- │        │     │     ├──problemNumber.java
- │        │     │     ├── ...
- │        │     │
- │        │     ├── week2
- │        │     │     ├──problemNumber.java
- │        │     │     ├── ...
- │        │     │
- │        │     ├── ...
- │        │    
- │        ├─ ...
- │            
- ├─ Online Judge2
- │        │
- │        ├─ member1
- │        │     │
- 
+ ├─ week01
+ │     │
+ │     ├── member1
+ │     │     ├──problemNumber.java
+ │     │     ├── ...
+ │     │
+ │     ├── member2
+ │     │     ├──problemNumber.java
+ │     │     ├── ...
+ │     │
+ │     ├── ...
+ │    
+ ├─ week02
+ │     │
+ │     ├── member1
+ │     │     ├──problemNumber.java
+ │     │     ├── ...
+ │     │
+ │     ├── member2
+ │     │     ├──problemNumber.java
+ │     │     ├── ...
+ │     │
+ │     ├── ...
+ │    
+ ├─ ...
 ``` 
 
 
