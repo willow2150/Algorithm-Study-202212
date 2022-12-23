@@ -72,6 +72,8 @@ Repository
 
 ## 주차 별 진행표
 
-|주차|기간|문제 1|문제 2|
-|-----|-----|-----|-----|
-|1|22.12.13~22.12.16|[꿀벌 승연이](https://www.acmicpc.net/problem/23083)|[출근 기록](https://www.acmicpc.net/problem/14238)|
+|주차|기간|문제 1|문제 2|문제 3|
+|-----|-----|-----|-----|-----|
+|1|22.12.13~22.12.16|[꿀벌 승연이](https://www.acmicpc.net/problem/23083)|[출근 기록](https://www.acmicpc.net/problem/14238)||
+|2|22.12.17~22.12.23|[타일 채우기](https://www.acmicpc.net/problem/2133)|[친구비](https://www.acmicpc.net/problem/16562)|[되돌리기](https://www.acmicpc.net/problem/1360)|
+|3|22.12.24~22.12.31|[회장뽑기](https://www.acmicpc.net/problem/2660)|[거짓말](https://www.acmicpc.net/problem/1043)|[드래곤 커브](https://www.acmicpc.net/problem/15685)|
