@@ -78,4 +78,4 @@ Repository
 |2|22.12.17~22.12.23|[타일 채우기](https://www.acmicpc.net/problem/2133)|[친구비](https://www.acmicpc.net/problem/16562)|[되돌리기](https://www.acmicpc.net/problem/1360)|
 |3|22.12.24~22.12.31|[회장뽑기](https://www.acmicpc.net/problem/2660)|[거짓말](https://www.acmicpc.net/problem/1043)|[드래곤 커브](https://www.acmicpc.net/problem/15685)|
 |4|23.01.01~23.01.07|[구간 나누기 2](https://www.acmicpc.net/problem/13397)|[욕심쟁이 판다](https://www.acmicpc.net/problem/1937)|[통학버스](https://www.acmicpc.net/problem/2513)|
-|5|23.01.08~23.01.14|[평범한 배낭](https://www.acmicpc.net/problem/12865)|[수들의 합 4](https://www.acmicpc.net/problem/2015)|[마라톤 2](https://www.acmicpc.net/problem/10653)|
+|5|23.01.15~23.01.21|[평범한 배낭](https://www.acmicpc.net/problem/12865)|[수들의 합 4](https://www.acmicpc.net/problem/2015)|[마라톤 2](https://www.acmicpc.net/problem/10653)|
