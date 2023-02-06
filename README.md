@@ -81,3 +81,4 @@ Repository
 |5|23.01.15~23.01.21|[평범한 배낭](https://www.acmicpc.net/problem/12865)|[수들의 합 4](https://www.acmicpc.net/problem/2015)|[마라톤 2](https://www.acmicpc.net/problem/10653)|
 |6|23.01.22~23.01.28|[트리](https://www.acmicpc.net/problem/1068)|[결! 합!](https://www.acmicpc.net/problem/16722)|[뮤탈리스크](https://www.acmicpc.net/problem/12869)|
 |7|23.01.29~23.02.04|[제곱수 찾기](https://www.acmicpc.net/problem/1025)|[입국심사](https://www.acmicpc.net/problem/3079)|[트리 순회](https://www.acmicpc.net/problem/22856)|
+|8|23.02.05~23.02.11|[택배](https://www.acmicpc.net/problem/1719)|[계단 수](https://www.acmicpc.net/problem/1562)||
