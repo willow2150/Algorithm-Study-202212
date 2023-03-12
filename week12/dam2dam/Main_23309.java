@@ -85,7 +85,6 @@ public class Main_23309 {
 	}
 
 	static void closeStation(int closeStation) {
-		previousStations[closeStation] = nextStations[closeStation] = 0;
 		previousStations[nextStations[closeStation]] = previousStations[closeStation];
 		nextStations[previousStations[closeStation]] = nextStations[closeStation];
 	}
