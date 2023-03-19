@@ -72,8 +72,8 @@ Repository
 
 ## 주차 별 진행표
 
-|주차|기간|문제 1|문제 2|문제 3|
-|-----|-----|-----|-----|-----|
+|주차|기간|문제 1|문제 2|문제 3|문제 4|
+|-----|-----|-----|-----|-----|-----|
 |1|22.12.13~22.12.16|[꿀벌 승연이](https://www.acmicpc.net/problem/23083)|[출근 기록](https://www.acmicpc.net/problem/14238)||
 |2|22.12.17~22.12.23|[타일 채우기](https://www.acmicpc.net/problem/2133)|[친구비](https://www.acmicpc.net/problem/16562)|[되돌리기](https://www.acmicpc.net/problem/1360)|
 |3|22.12.24~22.12.31|[회장뽑기](https://www.acmicpc.net/problem/2660)|[거짓말](https://www.acmicpc.net/problem/1043)|[드래곤 커브](https://www.acmicpc.net/problem/15685)|
@@ -85,3 +85,5 @@ Repository
 |9|23.02.12~23.02.18|[안정적인 문자열](https://www.acmicpc.net/problem/4889)|[세 수의 합](https://www.acmicpc.net/problem/2295)|[이진 트리](https://www.acmicpc.net/problem/13325)|
 |10|23.02.19~23.02.25|[항체 인식](https://www.acmicpc.net/problem/22352)|[문제 추천 시스템 Version 1](https://www.acmicpc.net/problem/21939)|[프렉탈 평면](https://www.acmicpc.net/problem/1030)|
 |11|23.02.27~23.03.05|[테트리스](https://www.acmicpc.net/problem/3019)|[MST 게임](https://www.acmicpc.net/problem/16202)|[소형기관차](https://www.acmicpc.net/problem/2616)|
+|12|23.03.06~23.03.12|[음식물 피하기](https://www.acmicpc.net/problem/1743)|[줄서기](https://www.acmicpc.net/problem/17178)|[철도 공사](https://www.acmicpc.net/problem/23309)|
+|13|23.03.13~23.03.19|[출근](https://www.acmicpc.net/problem/13903)|[전구 상태 뒤집기](https://www.acmicpc.net/problem/25634)|[단어 마방진](https://www.acmicpc.net/problem/24891)|[준오는 심술쟁이!!](https://www.acmicpc.net/problem/14437)|
