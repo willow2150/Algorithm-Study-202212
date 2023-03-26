@@ -9,6 +9,7 @@ import java.util.StringTokenizer;
 public class Main_24891 {
 
     public static final String NEW_LINE = "\n";
+    public static final String NONE = "NONE";
     public static List<String> selectWords;
 
     public static void main(String[] args) throws IOException {
@@ -37,7 +38,7 @@ public class Main_24891 {
 
             System.out.println(stringBuilder);
         } else {
-            System.out.println("NONE");
+            System.out.println(NONE);
         }
     }
 
