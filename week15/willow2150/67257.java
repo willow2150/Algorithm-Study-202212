@@ -27,7 +27,6 @@ class Solution {
 				calcPostfix(getPostfix(operations, operators, priority))
 			);
 		}
-
 		return maxValue;
 	}
 
