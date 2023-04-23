@@ -1,10 +1,10 @@
 # Algorithm-Study
 
- > 삼성 청년 소프트웨어 아카데미 8기 알고리즘 스터디를 위한 저장소입니다.
+ > 알고리즘 스터디를 위한 저장소입니다.
 
  - 기간: 2022.12.13 ~ 
  - 사용 언어: Java + @
- - 문제 출처: [Baekjoon Online Judge](https://www.acmicpc.net/)
+ - 문제 출처: [Baekjoon Online Judge](https://www.acmicpc.net/), [Programmers](https://programmers.co.kr/)
 
 
 
@@ -89,3 +89,4 @@ Repository
 |13|23.03.13~23.03.26|[출근](https://www.acmicpc.net/problem/13903)|[전구 상태 뒤집기](https://www.acmicpc.net/problem/25634)|[단어 마방진](https://www.acmicpc.net/problem/24891)|[준오는 심술쟁이!!](https://www.acmicpc.net/problem/14437)|
 |14|23.03.27~23.04.09|[에너지 모으기](https://www.acmicpc.net/problem/16198)|[나는 정말 휘파람을 못 불어](https://www.acmicpc.net/problem/24956)|[교환](https://www.acmicpc.net/problem/1039)||
 |15|23.04.10~23.04.23|[수식 최대화](https://school.programmers.co.kr/learn/courses/30/lessons/67257)|[ㄷㄷㄷㅈ](https://www.acmicpc.net/problem/19535)|[닭싸움 팀 정하기](https://www.acmicpc.net/problem/1765)||
+|16|23.04.24~23.04.30|[징검다리 건너기](https://school.programmers.co.kr/learn/courses/30/lessons/64062)|[표 병합](https://school.programmers.co.kr/learn/courses/30/lessons/150366)|[광고 삽입](https://school.programmers.co.kr/learn/courses/30/lessons/72414)||
