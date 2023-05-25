@@ -1,17 +1,13 @@
-import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayDeque;
+import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Baekjoon_22116 {
-	// 1. 이분탐색 + bfs 사용.
-	// 2. 경사의 최소와 최대값을 각각 시작과 끝으로 잡고 중간값을 mid로 잡아서 mid 값을 기준으로 이분탐색 진행.
-	// 3. 해당 경로가 끝까지 갈 수 있는 경로인지 bfs로 탐색을 진행한다.
-	// 4. 경로가 끝까지 갈 수 있는 경로면 end값을 줄여 탐색을 다시 진행.
-	// 5. 3,4번 작업을 반복한다.
+
+	private static int result;
 
 	public static void main(String[] args) throws IOException {
 		final BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
@@ -28,45 +24,34 @@ public class Baekjoon_22116 {
 			}
 		}
 
-		int start = 0;
-		int end = 1000000000;
-		int mid;
-		int result = 0;
-
-		while (start <= end) {
-			mid = (start + end) / 2;
-
-			if (findPath(map, mid)) {
-				result = mid;
-				end = mid - 1;
-			} else {
-				start = mid + 1;
-			}
-		}
-
+		result = 0;
+		findPath(map);
 		System.out.println(result);
 	}
 
-	private static boolean findPath(final int[][] map, final int mid) {
+	private static void findPath(final int[][] map) {
 		final boolean[][] isVisited = new boolean[map.length][map.length];
-		final Queue<Point> priorityQueue = new ArrayDeque<>();
+		final Queue<Node> queue = new PriorityQueue<>();
 
 		final int[] dx = {1, 0, -1, 0};
 		final int[] dy = {0, 1, 0, -1};
 
-		priorityQueue.add(new Point(0, 0));
+		queue.add(new Node(0, 0, 0));
 		isVisited[0][0] = true;
 
-		while (!priorityQueue.isEmpty()) {
-			final Point point = priorityQueue.poll();
+		while (!queue.isEmpty()) {
+			final Node node = queue.poll();
 
-			if (point.x == map.length - 1 && point.y == map.length - 1) {
-				return true;
+			isVisited[node.x][node.y] = true;
+			result = Math.max(result, node.slope);
+
+			if (node.x == map.length - 1 && node.y == map.length - 1) {
+				return;
 			}
 
 			for (int i = 0; i < dx.length; i++) {
-				int nextX = point.x + dx[i];
-				int nextY = point.y + dy[i];
+				int nextX = node.x + dx[i];
+				int nextY = node.y + dy[i];
 
 				if (nextX < 0 || nextY < 0 || nextX >= map.length || nextY >= map.length) {
 					continue;
@@ -76,15 +61,25 @@ public class Baekjoon_22116 {
 					continue;
 				}
 
-				final int slope = Math.abs(map[point.x][point.y] - map[nextX][nextY]);
-
-				if (slope <= mid) {
-					isVisited[nextX][nextY] = true;
-					priorityQueue.add(new Point(nextX, nextY));
-				}
+				queue.add(new Node(nextX, nextY, Math.abs(map[node.x][node.y] - map[nextX][nextY])));
 			}
 		}
+	}
 
-		return false;
+	static class Node implements Comparable<Node> {
+		private int x;
+		private int y;
+		private int slope;
+
+		public Node(final int x, final int y, final int slope) {
+			this.x = x;
+			this.y = y;
+			this.slope = slope;
+		}
+
+		@Override
+		public int compareTo(final Node node) {
+			return slope - node.slope;
+		}
 	}
 }
