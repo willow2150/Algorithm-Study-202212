@@ -92,3 +92,4 @@ Repository
 |16|23.04.24~23.05.14|[징검다리 건너기](https://school.programmers.co.kr/learn/courses/30/lessons/64062)|[표 병합](https://school.programmers.co.kr/learn/courses/30/lessons/150366)|[광고 삽입](https://school.programmers.co.kr/learn/courses/30/lessons/72414)||
 |17|23.05.15~23.05.21|[두 큐 합 같게 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/118667)|[코딩 테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668)|[이모티콘 할인행사](https://school.programmers.co.kr/learn/courses/30/lessons/150368)||
 |18|23.05.22~23.05.28|[창영이와 퇴근](https://www.acmicpc.net/problem/22116)|[최소비용 구하기](https://www.acmicpc.net/problem/1916)|[리모컨](https://www.acmicpc.net/problem/1107)||
+|19|23.05.29~23.06.04|[도둑질](https://school.programmers.co.kr/learn/courses/30/lessons/42897)|[2로 몇 번 나누어질까](https://www.acmicpc.net/problem/1407)|[용감한 용사 진수](https://www.acmicpc.net/problem/14718)||
