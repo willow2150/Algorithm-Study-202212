@@ -17,10 +17,8 @@ public class Baekjoon_1407 {
     private static long sumDivisor(final long number) {
         long result = number;
 
-        System.out.println("number: " + number + " / result: " + result);
         for (long i = 2; i <= number; i <<= 1) {
             result += (number / i) * (i >> 1);
-            System.out.println("number: " + number + " / i: " + i + " / result: " + result);
         }
 
         return result;
