@@ -93,4 +93,4 @@ Repository
 |17|23.05.15~23.05.21|[두 큐 합 같게 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/118667)|[코딩 테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668)|[이모티콘 할인행사](https://school.programmers.co.kr/learn/courses/30/lessons/150368)||
 |18|23.05.22~23.05.28|[창영이와 퇴근](https://www.acmicpc.net/problem/22116)|[최소비용 구하기](https://www.acmicpc.net/problem/1916)|[리모컨](https://www.acmicpc.net/problem/1107)||
 |19|23.05.29~23.06.04|[도둑질](https://school.programmers.co.kr/learn/courses/30/lessons/42897)|[2로 몇 번 나누어질까](https://www.acmicpc.net/problem/1407)|[용감한 용사 진수](https://www.acmicpc.net/problem/14718)||
-|20|23.06.05~23.06.11|[주식](https://www.acmicpc.net/problem/11501)|[Dance Dance Revolution](https://www.acmicpc.net/problem/2342)|[검문](https://www.acmicpc.net/problem/2981)||
+|20|23.06.05~23.06.11|[주식](https://www.acmicpc.net/problem/11501)|[Dance Dance Revolution](https://www.acmicpc.net/problem/2342)|[개구리 1](https://www.acmicpc.net/problem/15566)||
