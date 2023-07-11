@@ -1,75 +1,57 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+
 import java.util.StringTokenizer;
 
 public class Beakjoon_16724 {
     private static char[][] map;
-    private static int[] parent;
-    private static int N, M;
+    private static int[][] countCircleMap;
+    private static int N, M, circleCount;
 
     public static void main(String[] args) throws IOException {
         inputData();
         findSafeZone();
-        print();
-    }
-
-    private static void print() {
-        Set<Integer> set = new HashSet<>();
-
-        for (int i = 0; i < map.length; i++) {
-            for (int j = 0; j < map[0].length; j++) {
-                set.add(findParent(i * M + j));
-            }
-        }
-
-        System.out.println(set.size());
+        System.out.println(circleCount - 1);
     }
 
     private static void findSafeZone() {
-        int x, y;
-
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[0].length; j++) {
-                x = i;
-                y = j;
-
-                if (map[i][j] == 'U') {
-                    x--;
-                } else if (map[i][j] == 'D') {
-                    x++;
-                } else if (map[i][j] == 'L') {
-                    y--;
-                } else if (map[i][j] == 'R') {
-                    y++;
+                if (countCircleMap[i][j] != 0) {
+                    continue;
                 }
 
-                union(i * M + j, x * M + y);
+                countCircleMap[i][j] = dfs(i, j);
             }
         }
     }
 
-    private static void union(final int x, final int y) {
-        int a = findParent(x);
-        int b = findParent(y);
-
-        if (a < b) {
-            parent[b] = a;
-            return;
+    private static int dfs(final int i, final int j) {
+        if (i < 0 || j < 0 || i >= map.length || j >= map[0].length || countCircleMap[i][j] == -1) {
+            return circleCount++;
         }
 
-        parent[a] = b;
-    }
-
-    private static int findParent(final int number) {
-        if (parent[number] == number) {
-            return number;
+        if (countCircleMap[i][j] > 0) {
+            return countCircleMap[i][j];
         }
 
-        return parent[number] = findParent(parent[number]);
+        int x = i, y = j;
+        countCircleMap[i][j] = -1;
+
+        if (map[i][j] == 'U') {
+            x--;
+        } else if (map[i][j] == 'D') {
+            x++;
+        } else if (map[i][j] == 'L') {
+            y--;
+        } else if (map[i][j] == 'R') {
+            y++;
+        }
+
+        countCircleMap[i][j] = dfs(x, y);
+
+        return countCircleMap[i][j];
     }
 
     private static void inputData() throws IOException {
@@ -80,15 +62,12 @@ public class Beakjoon_16724 {
         M = Integer.parseInt(stringTokenizer.nextToken());
 
         map = new char[N][M];
-        parent = new int[N * M];
+        countCircleMap = new int[N][M];
+        circleCount = 0;
 
         for (int i = 0; i < N; i++) {
             char[] line = bufferedReader.readLine().toCharArray();
-
-            for (int j = 0; j < line.length; j++) {
-                map[i][j] = line[j];
-                parent[i * M + j] = i * M + j;
-            }
+            System.arraycopy(line, 0, map[i], 0, line.length);
         }
 
     }
