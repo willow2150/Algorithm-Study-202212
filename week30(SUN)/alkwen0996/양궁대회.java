@@ -1,7 +1,4 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 public class 양궁대회 {
     // 라이언이 우승.
@@ -10,8 +7,8 @@ public class 양궁대회 {
     // 완탐, 각 화살은 어피치보다 1발 많이 쏘거나 or 0발
 
     public static void main(String[] args) {
-        int n = 9;
-        int[] info = {0, 0, 1, 2, 0, 1, 1, 1, 1, 1, 1};
+        int n = 5;
+        int[] info = {2, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0};
 
         System.out.println(Arrays.toString(solution(n, info)));
     }
@@ -24,7 +21,7 @@ public class 양궁대회 {
         lionInfo = new int[info.length];
         answer = new int[info.length];
 
-        dfs(info.length - 1, 0, n, info, lionInfo);
+        dfs(0, n, info, lionInfo);
 
         if (maxGap == Integer.MIN_VALUE) {
             return new int[]{-1};
@@ -33,61 +30,68 @@ public class 양궁대회 {
         return answer;
     }
 
-    public static void dfs(final int startIndex, final int depth, final int n, final int[] info, final int[] lionInfo) {
-        if (depth == n) {
-            int aPeachScore = 0;
-            int lionScore = 0;
-            int scoreGap;
-
-            for (int i = 0; i < info.length; i++) {
-                if (lionInfo[i] == 0 && info[i] == 0) {
-                    continue;
-                }
-
-                if (info[i] >= lionInfo[i]) {
-                    aPeachScore += (10 - i);
-                }
-
-                if (lionInfo[i] > info[i]) {
-                    lionScore += (10 - i);
-                }
-            }
-
-            scoreGap = lionScore - aPeachScore;
-
-            if (scoreGap <= 0) {
-                return;
-            }
-
-            if (maxGap < scoreGap) {
-                maxGap = scoreGap;
-                answer = lionInfo.clone();
-
-                return;
-            }
+    public static void dfs(final int startIndex, final int n, final int[] info, final int[] lionInfo) {
+        if (n == 0) {
+            checkWinner(info, lionInfo);
 
             return;
         }
 
-        for (int i = startIndex; i >= 0; i--) {
+        for (int i = startIndex; i < info.length; i++) {
             lionInfo[i]++;
-            dfs(i, depth + 1, n, info, lionInfo);
+            dfs(i, n - 1, info, lionInfo);
             lionInfo[i]--;
         }
 
     }
 
-    public static boolean checkArr(final int[] answer, final int[] lionInfo) {
-        int lionIndex = lionInfo.length;
+    private static void checkWinner(final int[] info, final int[] lionInfo) {
+        int aPeachScore = 0;
+        int lionScore = 0;
+        int scoreGap;
 
-        for (int i = lionInfo.length - 1; i >= 0; i--) {
-            if (lionInfo[i] > answer[i]) {
-                lionIndex = i;
-                break;
+        for (int i = 0; i < info.length; i++) {
+            if (info[i] > lionInfo[i]) {
+                aPeachScore += (10 - i);
+            } else {
+                if (lionInfo[i] == 0 && info[i] == 0) {
+                    continue;
+                }
+
+                if (info[i] == lionInfo[i]) {
+                    aPeachScore += (10 - i);
+                } else {
+                    lionScore += (10 - i);
+                }
             }
         }
 
-        return lionIndex != lionInfo.length;
+        scoreGap = lionScore - aPeachScore;
+
+        if (scoreGap > 0) {
+            if (maxGap < scoreGap) {
+                maxGap = scoreGap;
+                answer = lionInfo.clone();
+
+            } else if (maxGap == scoreGap) {
+                if (checkArr(answer, lionInfo)) {
+                    answer = lionInfo.clone();
+                }
+            }
+        }
+
+    }
+
+    public static boolean checkArr(final int[] answer, final int[] lionInfo) {
+        for (int i = lionInfo.length - 1; i >= 0; i--) {
+            if (answer[i] == lionInfo[i]) {
+                continue;
+            }
+
+            return answer[i] <= lionInfo[i];
+        }
+
+        return false;
     }
 
 }
