@@ -2,7 +2,7 @@
 
  > 알고리즘 스터디를 위한 저장소입니다.
 
- - 기간: 2022.12.13 ~ 
+ - 기간: 2022.12.13 ~ 2023.09.24
  - 사용 언어: Java + @
  - 문제 출처: [Baekjoon Online Judge](https://www.acmicpc.net/), [Programmers](https://programmers.co.kr/)
 
